@@ -41,7 +41,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-lg navbar-dark purple mb-3">
         <div className="container">
           <Link className="nav-brand text-white" to="/">
-            aTracker
+            Login App
           </Link>
           <button
             className="navbar-toggler"

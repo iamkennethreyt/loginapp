@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,6 @@
     "mongoose": "^5.4.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "redux-thunk": "^2.3.0",
     "validator": "^10.9.0"
   },
   "devDependencies": {
